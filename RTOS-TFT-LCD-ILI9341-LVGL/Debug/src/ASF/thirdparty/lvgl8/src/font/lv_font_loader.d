@@ -176,7 +176,7 @@ src/ASF/thirdparty/lvgl8/src/font/lv_font_loader.d \
  ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/list/lv_list.h \
  ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/list/../../../core/lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/list/../../layouts/flex/lv_flex.h \
- d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
+ ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/list/../../layouts/flex/../../../core/lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/msgbox/lv_msgbox.h \
  ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/msgbox/../../../lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/meter/lv_meter.h \
@@ -594,7 +594,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/list/../../layouts/flex/lv_flex.h:
 
-d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
+../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/list/../../layouts/flex/../../../core/lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/font/../../src/extra/widgets/msgbox/lv_msgbox.h:
 

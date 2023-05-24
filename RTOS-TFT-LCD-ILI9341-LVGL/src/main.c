@@ -22,14 +22,14 @@
 #define MAGNETIC_PIO_ID ID_PIOA
 #define MAGNETIC_PIO_IDX 19
 #define MAGNETIC_PIO_IDX_MASK (1 << MAGNETIC_PIO_IDX)
-float wheel_radius = 0.5;
+float wheel_radius = 0.25;
 double bike_velocity = 0.0;
 double bike_velocity_previous = 0.0;
 double acceleration = 0.0;
 volatile int time_since_last_pulse = 0;
 double trajectory_travelled_dist = 0.0;
 uint64_t trajectory_seconds = 0;
-bool  trajectory_stopped = true;
+volatile int is_trajectory_running = 0;
 
 /************************************************************************/
 /* LCD / LVGL                                                           */
@@ -50,15 +50,7 @@ lv_obj_t * labelAvgSpeed;
 lv_obj_t * labelPlay;
 lv_obj_t * labelPause;
 lv_obj_t * labelReset;
-
-
-
-
-
-
-
-
-
+uint32_t cron_hour=0, cron_min=0, cron_sec=0;
 
 SemaphoreHandle_t xMutexLVGL ;
 LV_FONT_DECLARE(dseg18);
@@ -93,14 +85,46 @@ extern void vApplicationMallocFailedHook(void) {
 /* lvgl funcs                                                           */
 /************************************************************************/
 
-static void event_handler(lv_event_t * e) {
+static void play_handler(lv_event_t * e) {
 	lv_event_code_t code = lv_event_get_code(e);
 	if(code == LV_EVENT_CLICKED) {
 		LV_LOG_USER("Clicked");
+		is_trajectory_running = 1;
+		lv_obj_set_style_text_color(labelPlay, lv_color_hex(0x52ff80), LV_STATE_DEFAULT);
+		lv_obj_set_style_text_color(labelPause, lv_color_white(), LV_STATE_DEFAULT);
+
+
+		
 	}
 	else if(code == LV_EVENT_VALUE_CHANGED) {
 		LV_LOG_USER("Toggled");
 	}
+}
+
+static void pause_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
+	if(code == LV_EVENT_CLICKED) {
+		is_trajectory_running = 0;
+		lv_obj_set_style_text_color(labelPlay, lv_color_white(), LV_STATE_DEFAULT);
+
+		lv_obj_set_style_text_color(labelPause, lv_color_hex(0xff0800), LV_STATE_DEFAULT);
+
+		
+	}
+
+}
+
+static void reset_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
+	if(code == LV_EVENT_CLICKED) {
+		cron_hour = 0;
+		cron_min = 0;
+		cron_sec = 0;
+		trajectory_seconds =0;
+		trajectory_travelled_dist = 0;
+		
+	}
+
 }
 
 /************************************************************************/
@@ -163,6 +187,7 @@ void RTC_Handler(void) {
     rtc_clear_status(RTC, RTC_SCCR_TDERRCLR);
 	/// ...
 }
+
 void lv_draw_gui(void) {
 	static lv_style_t style;
 	lv_style_init(&style);
@@ -201,14 +226,14 @@ void lv_draw_gui(void) {
 	lv_obj_set_style_text_font(labelTrajeto, &dseg24, LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(labelTrajeto, lv_color_white(), LV_STATE_DEFAULT);
 	lv_label_set_text(labelTrajeto, "TRAJETO:");
-	lv_obj_align(labelTrajeto,LV_ALIGN_CENTER,0,-30);
+	lv_obj_align(labelTrajeto,LV_ALIGN_CENTER,0,0);
 
 
 	labelCron = lv_label_create(lv_scr_act());
 	lv_obj_set_style_text_font(labelCron, &dseg18, LV_STATE_DEFAULT);
 	lv_obj_set_style_text_color(labelCron, lv_color_white(), LV_STATE_DEFAULT);
 	lv_label_set_text(labelCron, "00 00");
-	lv_obj_align_to(labelCron,labelAccelTxt,LV_ALIGN_OUT_BOTTOM_LEFT,10,50);
+	lv_obj_align_to(labelCron,labelAccelTxt,LV_ALIGN_OUT_BOTTOM_LEFT,10,80);
 	
 	
 	labelDist = lv_label_create(lv_scr_act());
@@ -223,7 +248,44 @@ void lv_draw_gui(void) {
 	lv_obj_set_style_text_color(labelAvgSpeed, lv_color_white(), LV_STATE_DEFAULT);
 	lv_label_set_text(labelAvgSpeed, "V MED 0.00");
 	lv_obj_align_to(labelAvgSpeed,labelCron,LV_ALIGN_OUT_BOTTOM_LEFT,10,20);
-	
+
+	lv_obj_t * btnPlay = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(btnPlay, play_handler, LV_EVENT_ALL, NULL);
+	lv_obj_align(btnPlay, LV_ALIGN_BOTTOM_LEFT, 10, -10);
+    lv_obj_add_style(btnPlay, &style, 0);
+	lv_obj_set_width(btnPlay, 60);  
+	lv_obj_set_height(btnPlay, 60);
+
+	labelPlay = lv_label_create(btnPlay);
+	// lv_obj_set_style_text_color(labelPlay, lv_color_white(), LV_STATE_DEFAULT);
+	lv_label_set_text(labelPlay, LV_SYMBOL_PLAY);
+	lv_obj_center(labelPlay);
+
+	lv_obj_t * btnPause = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(btnPause, pause_handler, LV_EVENT_ALL, NULL);
+	lv_obj_align(btnPause, LV_ALIGN_BOTTOM_MID, 0,-10);
+    lv_obj_add_style(btnPause, &style, 0);
+	lv_obj_set_width(btnPause, 60);  
+	lv_obj_set_height(btnPause, 60);
+
+	labelPause = lv_label_create(btnPause);
+	// lv_obj_set_style_text_color(labelPause, lv_color_white(), LV_STATE_DEFAULT);
+	lv_label_set_text(labelPause, LV_SYMBOL_PAUSE);
+	lv_obj_set_style_text_color(labelPause, lv_color_hex(0xff0800), LV_STATE_DEFAULT);
+
+	lv_obj_center(labelPause);
+
+	lv_obj_t * btnReset = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(btnReset, reset_handler, LV_EVENT_ALL, NULL);
+	lv_obj_align(btnReset, LV_ALIGN_BOTTOM_RIGHT, -10,-10);
+    lv_obj_add_style(btnReset, &style, 0);
+	lv_obj_set_width(btnReset, 60);  
+	lv_obj_set_height(btnReset, 60);
+
+	labelReset = lv_label_create(btnReset);
+	// lv_obj_set_style_text_color(labelReset, lv_color_white(), LV_STATE_DEFAULT);
+	lv_label_set_text(labelReset, LV_SYMBOL_REFRESH);
+	lv_obj_center(labelReset);
 	
 }
 
@@ -247,28 +309,31 @@ static void task_lcd(void *pvParameters) {
 		vTaskDelay(50);
 	}
 }
+
 static void task_clock(void *pvParameters) {
 	calendar rtc_initial = {2018, 3, 19, 12, 15, 45 ,1};
 	
 	RTC_init(RTC, ID_RTC, rtc_initial, RTC_IER_SECEN);
 	
 	uint32_t current_hour, current_min, current_sec;
-	uint32_t cron_hour=0, cron_min=0, cron_sec=0;
 	int blink = 1;
 
 	for (;;)  {
 		 if (xSemaphoreTake(xSemaphoreClock, 1000)) {
 			 rtc_get_time(RTC, &current_hour, &current_min, &current_sec);
-			 cron_sec++;
-			 trajectory_seconds++;
-			 if (cron_sec>=60){
-				 cron_sec = 0;
-				 cron_min++;
+			 if (is_trajectory_running){
+					cron_sec++;
+					trajectory_seconds++;
+					if (cron_sec>=60){
+						cron_sec = 0;
+						cron_min++;
+					}
+					if (cron_min>=60){
+						cron_min = 0;
+						cron_min++;
+					}
 			 }
-			 if (cron_min>=60){
-				 cron_min = 0;
-				 cron_min++;
-			 }
+			
 			 xSemaphoreTake( xMutexLVGL, portMAX_DELAY );
 			 if (blink){
 				lv_label_set_text_fmt(labelClock, "%02d:%02d:%02d", current_hour,current_min,current_sec);
@@ -288,6 +353,7 @@ static void task_clock(void *pvParameters) {
 		 }
 	}
 }
+
 static void task_speed(void *pvParameters) {
 	double time;
 	char* icon;
@@ -295,9 +361,15 @@ static void task_speed(void *pvParameters) {
 	double avgSpeed;
 	for (;;){
 		 if (xSemaphoreTake(xSemaphoreSpeed, 1000)) {
+			if (is_trajectory_running){
 			 trajectory_travelled_dist += m_per_rot;
+
+			}
+			 if (trajectory_seconds>0){
 			 avgSpeed = (trajectory_travelled_dist/trajectory_seconds)*3.6;
-			 
+			 } else {
+				avgSpeed = 0;
+			 }
 			time = ((double)time_since_last_pulse)/2048.0;
 			bike_velocity =( (double)(PI * 2.0*3.6*RAIO))/ time;
 			acceleration = (bike_velocity-bike_velocity_previous);
@@ -451,15 +523,14 @@ static void task_simulador(void *pvParameters) {
 		delay_ms(t);
 	}
 }
+
 int main(void) {
 	board_init();
 	sysclk_init();
 	configure_console();
 	configure_magnetic();
 	configure_lcd();
-	
 	ili9341_set_orientation(ILI9341_FLIP_Y|ILI9341_SWITCH_XY);
-	
 	configure_touch();
 	configure_lvgl();
 	xSemaphoreClock = xSemaphoreCreateBinary();
@@ -474,9 +545,9 @@ int main(void) {
 	if (xTaskCreate(task_speed, "speed", TASK_LCD_STACK_SIZE, NULL, TASK_LCD_STACK_PRIORITY, NULL) != pdPASS) {
 		printf("Failed to create clock task\r\n");
 	}
-	 if (xTaskCreate(task_simulador, "SIMUL", TASK_LCD_STACK_SIZE, NULL, TASK_LCD_STACK_PRIORITY, NULL) != pdPASS) {
-		 printf("Failed to create lcd task\r\n");
-	 }
+	if (xTaskCreate(task_simulador, "SIMUL", TASK_LCD_STACK_SIZE, NULL, TASK_LCD_STACK_PRIORITY, NULL) != pdPASS) {
+		printf("Failed to create lcd task\r\n");
+	}
 	vTaskStartScheduler();
 	while(1){ }
 }

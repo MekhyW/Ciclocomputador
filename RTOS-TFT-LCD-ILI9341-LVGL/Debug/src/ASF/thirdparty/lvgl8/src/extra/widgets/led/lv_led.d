@@ -45,7 +45,7 @@ src/ASF/thirdparty/lvgl8/src/extra/widgets/led/lv_led.d \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/lv_hal.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/lv_img_buf.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/lv_color.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/../lv_conf_internal.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/lv_math.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/lv_types.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/lv_area.h \
@@ -60,9 +60,9 @@ src/ASF/thirdparty/lvgl8/src/extra/widgets/led/lv_led.d \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../lv_conf_internal.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/lv_style.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/lv_font.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/../lv_conf_internal.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/lv_symbol_def.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/../misc/lv_area.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\misc\lv_area.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/lv_color.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/lv_area.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/lv_anim.h \
@@ -95,7 +95,7 @@ src/ASF/thirdparty/lvgl8/src/extra/widgets/led/lv_led.d \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/lv_img_decoder.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/lv_img_buf.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/../misc/lv_fs.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/../misc/../lv_conf_internal.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/../misc/lv_types.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/../misc/lv_area.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/lv_img_cache.h \
@@ -164,66 +164,66 @@ src/ASF/thirdparty/lvgl8/src/extra/widgets/led/lv_led.d \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/lv_extra.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/lv_widgets.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/animimg/lv_animimg.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/animimg/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/lv_calendar.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/../../../widgets/lv_btnmatrix.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/lv_calendar_header_arrow.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/lv_calendar_header_dropdown.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/chart/lv_chart.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/chart/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/keyboard/lv_keyboard.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/keyboard/../../../widgets/lv_btnmatrix.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/lv_list.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/../../../core/lv_obj.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/../../layouts/flex/lv_flex.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/../../layouts/flex/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\extra\layouts\flex\lv_flex.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/msgbox/lv_msgbox.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/msgbox/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/meter/lv_meter.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/meter/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinbox/lv_spinbox.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinbox/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinner/lv_spinner.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinner/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tabview/lv_tabview.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tabview/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tileview/lv_tileview.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tileview/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/win/lv_win.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/win/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/colorwheel/lv_colorwheel.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/colorwheel/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/led/lv_led.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/imgbtn/lv_imgbtn.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/imgbtn/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/span/lv_span.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/span/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/layouts/lv_layouts.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/layouts/flex/lv_flex.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/layouts/grid/lv_grid.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/layouts/grid/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/lv_themes.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/default/lv_theme_default.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/default/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/mono/lv_theme_mono.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/mono/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/basic/lv_theme_basic.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/basic/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/lv_others.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/snapshot/lv_snapshot.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/snapshot/../../../lv_conf_internal.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/snapshot/../../../core/lv_obj.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/lv_libs.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/bmp/lv_bmp.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/bmp/../../../lv_conf_internal.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/fsdrv/lv_fsdrv.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/png/lv_png.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/png/../../../lv_conf_internal.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/gif/lv_gif.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/gif/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/qrcode/lv_qrcode.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/qrcode/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/sjpg/lv_sjpg.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\stdio.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\types.h \
@@ -238,9 +238,9 @@ src/ASF/thirdparty/lvgl8/src/extra/widgets/led/lv_led.d \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\machine\types.h \
  c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-none-eabi\include\sys\stdio.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/freetype/lv_freetype.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/freetype/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/rlottie/lv_rlottie.h \
- ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/rlottie/../../../lvgl.h \
+ d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h \
  ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../misc/lv_assert.h
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/lv_led.h:
@@ -331,7 +331,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/lv_color.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/../lv_conf_internal.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/hal/../draw/../misc/lv_math.h:
 
@@ -361,11 +361,11 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/lv_font.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/../lv_conf_internal.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/lv_symbol_def.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/../font/../misc/lv_area.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\misc\lv_area.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../misc/lv_color.h:
 
@@ -431,7 +431,7 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/../misc/lv_fs.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/../misc/../lv_conf_internal.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/core/../draw/../misc/lv_types.h:
 
@@ -569,75 +569,75 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/animimg/lv_animimg.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/animimg/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/lv_calendar.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/../../../widgets/lv_btnmatrix.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/lv_calendar_header_arrow.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/calendar/lv_calendar_header_dropdown.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/chart/lv_chart.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/chart/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/keyboard/lv_keyboard.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/keyboard/../../../widgets/lv_btnmatrix.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\widgets\lv_btnmatrix.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/lv_list.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/../../layouts/flex/lv_flex.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\extra\layouts\flex\lv_flex.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/list/../../layouts/flex/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/msgbox/lv_msgbox.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/msgbox/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/meter/lv_meter.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/meter/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinbox/lv_spinbox.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinbox/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinner/lv_spinner.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/spinner/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tabview/lv_tabview.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tabview/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tileview/lv_tileview.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/tileview/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/win/lv_win.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/win/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/colorwheel/lv_colorwheel.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/colorwheel/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/led/lv_led.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/imgbtn/lv_imgbtn.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/imgbtn/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/span/lv_span.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/widgets/span/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/layouts/lv_layouts.h:
 
@@ -645,49 +645,49 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/layouts/grid/lv_grid.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/layouts/grid/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/lv_themes.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/default/lv_theme_default.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/default/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/mono/lv_theme_mono.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/mono/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/basic/lv_theme_basic.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/themes/basic/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/lv_others.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/snapshot/lv_snapshot.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/snapshot/../../../lv_conf_internal.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/others/snapshot/../../../core/lv_obj.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\core\lv_obj.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/lv_libs.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/bmp/lv_bmp.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/bmp/../../../lv_conf_internal.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/fsdrv/lv_fsdrv.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/png/lv_png.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/png/../../../lv_conf_internal.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lv_conf_internal.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/gif/lv_gif.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/gif/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/qrcode/lv_qrcode.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/qrcode/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/sjpg/lv_sjpg.h:
 
@@ -717,10 +717,10 @@ c:\program\ files\ (x86)\atmel\studio\7.0\toolchain\arm\arm-gnu-toolchain\arm-no
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/freetype/lv_freetype.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/freetype/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/rlottie/lv_rlottie.h:
 
-../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../../src/extra/libs/rlottie/../../../lvgl.h:
+d:\dev\dev\ciclocomputador\rtos-tft-lcd-ili9341-lvgl\src\asf\thirdparty\lvgl8\src\lvgl.h:
 
 ../src/ASF/thirdparty/lvgl8/src/extra/widgets/led/../../../misc/lv_assert.h:

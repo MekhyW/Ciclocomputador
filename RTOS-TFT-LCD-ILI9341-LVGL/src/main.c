@@ -13,7 +13,6 @@
 /************************************************************************/
 /* constants and global variables                                       */
 /************************************************************************/
-#define RAIO 0.508f/2.0f
 #define VEL_MAX_KMH  5.0f
 #define VEL_MIN_KMH  0.5f
 #define RAMP
@@ -50,6 +49,9 @@ lv_obj_t * labelAvgSpeed;
 lv_obj_t * labelPlay;
 lv_obj_t * labelPause;
 lv_obj_t * labelReset;
+lv_obj_t * labelAro; 
+int aro = 20;
+double RAIO;
 uint32_t cron_hour=0, cron_min=0, cron_sec=0;
 
 SemaphoreHandle_t xMutexLVGL ;
@@ -113,6 +115,28 @@ static void pause_handler(lv_event_t * e) {
 	}
 
 }
+
+static void plus_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
+	if(code == LV_EVENT_CLICKED) {
+		aro++;
+		RAIO = ((double)aro/2.0)/39.37;
+		lv_label_set_text_fmt(labelAro,"ARO: %d",aro);
+	}
+
+}
+static void minus_handler(lv_event_t * e) {
+	lv_event_code_t code = lv_event_get_code(e);
+	if(code == LV_EVENT_CLICKED) {
+		aro--;
+		RAIO = ((double)aro/2.0)/39.37;
+		lv_label_set_text_fmt(labelAro,"ARO: %d",aro);
+		
+	}
+
+}
+
+
 
 static void reset_handler(lv_event_t * e) {
 	lv_event_code_t code = lv_event_get_code(e);
@@ -224,30 +248,62 @@ void lv_draw_gui(void) {
 	lv_obj_t * labelTrajeto;
 	labelTrajeto = lv_label_create(lv_scr_act());
 	lv_obj_set_style_text_font(labelTrajeto, &dseg24, LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(labelTrajeto, lv_color_white(), LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(labelTrajeto, lv_color_hex(0xf2f4ff), LV_STATE_DEFAULT);
 	lv_label_set_text(labelTrajeto, "TRAJETO:");
-	lv_obj_align(labelTrajeto,LV_ALIGN_CENTER,0,0);
+	lv_obj_align(labelTrajeto,LV_ALIGN_CENTER,0,10);
 
 
 	labelCron = lv_label_create(lv_scr_act());
 	lv_obj_set_style_text_font(labelCron, &dseg18, LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(labelCron, lv_color_white(), LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(labelCron, lv_color_hex(0xf2f4ff), LV_STATE_DEFAULT);
 	lv_label_set_text(labelCron, "00 00");
-	lv_obj_align_to(labelCron,labelAccelTxt,LV_ALIGN_OUT_BOTTOM_LEFT,10,80);
+	lv_obj_align_to(labelCron,labelAccelTxt,LV_ALIGN_OUT_BOTTOM_LEFT,10,90);
 	
 	
 	labelDist = lv_label_create(lv_scr_act());
 	lv_obj_set_style_text_font(labelDist, &dseg18, LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(labelDist, lv_color_white(), LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(labelDist, lv_color_hex(0xf2f4ff) ,LV_STATE_DEFAULT);
 	lv_label_set_text_fmt(labelDist, "%d M", 0);
 	lv_obj_align_to(labelDist,labelCron,LV_ALIGN_OUT_RIGHT_MID,30,0);
 	
 	
 	labelAvgSpeed = lv_label_create(lv_scr_act());
 	lv_obj_set_style_text_font(labelAvgSpeed, &dseg24, LV_STATE_DEFAULT);
-	lv_obj_set_style_text_color(labelAvgSpeed, lv_color_white(), LV_STATE_DEFAULT);
+	lv_obj_set_style_text_color(labelAvgSpeed, lv_color_hex(0xf2f4ff), LV_STATE_DEFAULT);
 	lv_label_set_text(labelAvgSpeed, "V MED 0.00");
 	lv_obj_align_to(labelAvgSpeed,labelCron,LV_ALIGN_OUT_BOTTOM_LEFT,10,20);
+
+	lv_obj_t * btnPlus = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(btnPlus, plus_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_style(btnPlus, &style, 0);
+	lv_obj_set_width(btnPlus, 35);
+	lv_obj_set_height(btnPlus, 35);
+	lv_obj_align(btnPlus, LV_ALIGN_LEFT_MID, 30, -30);
+	
+
+	lv_label_t *labelPlus = lv_label_create(btnPlus);
+	lv_obj_set_style_text_color(labelPlus, lv_color_hex(0xe3fdff), LV_STATE_DEFAULT);
+	lv_label_set_text(labelPlus, LV_SYMBOL_PLUS);
+	lv_obj_center(labelPlus);
+	
+	
+	lv_obj_t * btnMinus = lv_btn_create(lv_scr_act());
+	lv_obj_add_event_cb(btnMinus, minus_handler, LV_EVENT_ALL, NULL);
+	lv_obj_add_style(btnMinus, &style, 0);
+	lv_obj_set_width(btnMinus, 35);
+	lv_obj_set_height(btnMinus, 35);
+	lv_obj_align(btnMinus, LV_ALIGN_RIGHT_MID, -30, -30);
+	
+
+	lv_label_t *labelMinus = lv_label_create(btnMinus);
+	lv_obj_set_style_text_color(labelMinus, lv_color_hex(0xe3fdff), LV_STATE_DEFAULT);
+	lv_label_set_text(labelMinus, LV_SYMBOL_MINUS);
+	lv_obj_center(labelMinus);
+	
+	labelAro = lv_label_create(lv_scr_act());
+	lv_obj_set_style_text_color(labelAro, lv_color_hex(0xc3ffff), LV_STATE_DEFAULT);
+	lv_label_set_text(labelAro, "ARO: 20");
+	lv_obj_align(labelAro,LV_ALIGN_CENTER,0,-30);
 
 	lv_obj_t * btnPlay = lv_btn_create(lv_scr_act());
 	lv_obj_add_event_cb(btnPlay, play_handler, LV_EVENT_ALL, NULL);
@@ -255,7 +311,7 @@ void lv_draw_gui(void) {
     lv_obj_add_style(btnPlay, &style, 0);
 	lv_obj_set_width(btnPlay, 60);  
 	lv_obj_set_height(btnPlay, 60);
-
+	
 	labelPlay = lv_label_create(btnPlay);
 	// lv_obj_set_style_text_color(labelPlay, lv_color_white(), LV_STATE_DEFAULT);
 	lv_label_set_text(labelPlay, LV_SYMBOL_PLAY);
@@ -387,7 +443,7 @@ static void task_speed(void *pvParameters) {
 			}
 			lv_label_set_text_fmt(labelSpeed,"VEL:%.2f", bike_velocity);
 			lv_label_set_text_fmt(labelDist,"%d M", (int)trajectory_travelled_dist);
-			lv_label_set_text_fmt(labelAvgSpeed,"V. MED:%.2f", avgSpeed);
+			lv_label_set_text_fmt(labelAvgSpeed,"V. MED: %.2f", avgSpeed);
 			
 			
 			
@@ -525,6 +581,7 @@ static void task_simulador(void *pvParameters) {
 }
 
 int main(void) {
+	RAIO = ((double)aro/2.0)/39.37;
 	board_init();
 	sysclk_init();
 	configure_console();
